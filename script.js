@@ -27,12 +27,12 @@ const functions = () => {
     });
   }
 };
-const handleButtonClick = (value) => {
+const handleButtonClick = (value,key) => {
   const lastChar = currentvalue.slice(-1);
-  if (value >= "0" && value <= "9") && (lastChar === ")" || !isNaN(lastChar))) {
-    currentvalue += "*" + value;
+  if (key >= "0" && key <= "9") && (lastChar === ")" || !isNaN(lastChar))) {
+    currentvalue += "*" + key;
   } else {
-    currentvalue += value;
+    currentvalue += key;
   }
   if (value == "DE") {
     currentvalue = currentvalue.slice(0, -1);
