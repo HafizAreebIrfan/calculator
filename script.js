@@ -144,10 +144,8 @@ functions();
 window.addEventListener("keydown", (evt) => {
   const key = evt.key;
   const lastChar = currentvalue.slice(-1);
-  if (key >= "0" && key <= "9") && (lastChar === ")" || !isNaN(lastChar))) {
-    currentvalue += "*" + key;
-  } else {
-    currentvalue += key;
+  if (key >= "0" && key <= "9") {
+    handleButtonClick(key);
   } else if (key === ".") {
     handleButtonClick(".");
   } else if (key === ",") {
