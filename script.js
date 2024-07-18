@@ -28,6 +28,12 @@ const functions = () => {
   }
 };
 const handleButtonClick = (value) => {
+  const lastChar = currentvalue.slice(-1);
+  if (value >= "0" && value <= "9") && (lastChar === ")" || !isNaN(lastChar))) {
+    currentvalue += "*" + value;
+  } else {
+    currentvalue += value;
+  }
   if (value == "DE") {
     currentvalue = currentvalue.slice(0, -1);
     inputtext.value = currentvalue;
