@@ -27,13 +27,7 @@ const functions = () => {
     });
   }
 };
-const handleButtonClick = (value,key) => {
-  const lastChar = currentvalue.slice(-1);
-  if (key >= "0" && key <= "9") && (lastChar === ")" || !isNaN(lastChar))) {
-    currentvalue += "*" + key;
-  } else {
-    currentvalue += key;
-  }
+const handleButtonClick = (value) => {
   if (value == "DE") {
     currentvalue = currentvalue.slice(0, -1);
     inputtext.value = currentvalue;
@@ -149,8 +143,11 @@ const evaluateresult = () => {
 functions();
 window.addEventListener("keydown", (evt) => {
   const key = evt.key;
-  if (key >= "0" && key <= "9") {
-    handleButtonClick(key);
+  const lastChar = currentvalue.slice(-1);
+  if (key >= "0" && key <= "9") && (lastChar === ")" || !isNaN(lastChar))) {
+    currentvalue += "*" + key;
+  } else {
+    currentvalue += key;
   } else if (key === ".") {
     handleButtonClick(".");
   } else if (key === ",") {
