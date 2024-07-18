@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+#calculator{
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: #f0f3ff;
+}
+.calculatorbox{
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 25px;
+    max-width: 600px;
+}
+
+.result input{
+    width: 100%;
+    border-radius: 10px;
+    padding: 15px;
+    border: 1px solid #e9e8e8;
+    margin-bottom: 20px;
+    text-align: right;
+    font-size: 22px;
+    font-weight: 400;
+    outline: none;
+    color: #57575774;
+}
+.result input:focus{
+    background-color: #ffffff;
+    border: 1px solid #e9e8e8;
+    box-shadow: 0.3em 0.3em 1em rgb(236, 236, 236);
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 6px;
+    width: 100%;
+}
+.afbox{
+    display: flex;
+    flex: 1 1 15%;
+}
+
+.numbers,
+.basicfunctions{
+    display: flex;
+    flex: 1 1 16%;
+    margin: 10px 10px 0 0;
+}
+.numbox{
+    display: flex;
+    flex: 1 1 25%;
+}
+#btn, #toggle{
+    cursor: pointer;
+    display: flex;
+    flex: 1 1 0%;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    background-color: #f1f3f4;
+    border-radius: 5px;
+    border: 1px solid #f1f3f4;
+    box-shadow: 2px 3px 6px #f1f3f4;
+    outline: none;
+}
+
+.numbox #btn{
+    background-color: #ffffff;
+    border: 1px solid #e9e8e8;
+    box-shadow: 6px 4px 6px #e9e8e8;
+}
+.basicbox{
+    display: flex;
+    flex: 1 1 25%;
+}
+@media only screen and (max-width: 600px){
+    .calculatorbox{
+        border-radius: 0px;
+    }
+}
+@media only screen and (max-width: 500px){
+    #calculator{
+        align-items: start;
+    }
+    .calculatorbox{
+        border-radius: 0px;
+        padding: 0;
+        height: 100%;
+    }
+    .result input{
+        width: 100%;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        padding: 40px 15px 40px 15px;
+        border: 1px solid #e9e8e8;
+    }
+    .advfunc,
+    .basicfunc{
+        padding: 0rem 1rem 0 1rem;
+    }
+}
+@media only screen and (max-width: 400px){
+    .afbox{
+        display: flex;
+        flex: 1 1 20%;
+    }
+    .numbers,
+    .basicfunctions{
+        display: flex;
+        flex: 1 1 16%;
+        margin: 10px 10px 0 0;
+    }
+    .numbox{
+        display: flex;
+        flex: 1 1 25%;
+    }
+    .basicbox{
+        display: flex;
+        flex: 1 1 25%;
+    }
+}
